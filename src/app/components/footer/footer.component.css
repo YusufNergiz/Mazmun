@@ -1,0 +1,42 @@
+footer {
+    height: 31.9rem;
+    border-top: 1.8rem solid #14BC1D;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    background: #FFFFFF;
+    box-shadow: 0rem 0.7rem 0.7rem rgba(0, 0, 0, 0.1);
+}
+
+footer > div > div {
+    margin-top: 3rem;
+}
+
+footer > div > div > p, a {
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #3F3F3F;
+    margin-top: 2rem;
+    text-decoration: none;
+}
+
+.footer-social-media > a {
+    padding-inline: 2rem;
+    margin-bottom: 5rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    footer {
+        height: fit-content;
+    }
+
+    .footer-social-media {
+        margin-bottom: 0;
+        margin-top: 2rem;
+    }
+}

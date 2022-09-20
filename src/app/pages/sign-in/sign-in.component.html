@@ -1,0 +1,33 @@
+<div class="container mt-5 mb-5">
+    <div class="sign-in-container row">
+        <div class="col-12 col-lg-6 center-items-inside">
+            <img src="assets\images\Login Photo.png" alt="Sign In Photo">
+        </div>
+        <div class="col-12 col-lg-6 center-items-inside-column-wise">
+            <form class="row" (ngSubmit)="signInUser()">
+                <div class="col-12 center-items-inside-column-wise">
+                    <label for="email">Пошта</label>
+                    <input type="email" name="email" id="email" [(ngModel)]="email">
+                </div>
+                <div class="col-12 center-items-inside-column-wise">
+                    <label for="password">Пароль</label>
+                    <input type="password" name="password" id="password" [(ngModel)]="password">
+                </div>
+                <div class="col-12 center-items-inside-column-wise"><button type="submit">Кіру</button></div>
+            </form>
+            <div class="center-items-inside">
+                <div class="line"></div>
+                <p>немесе сіз жүйеге кіре аласыз</p>
+                <div class="line"></div>
+            </div>
+            <div class="social-sign-in">
+                <button class="google-button" (click)="signInWithGoogle()"><img src="assets\images\google-icon.png" alt="Google Icon">Google арқылы кіріңіз</button>
+                <button class="facebook-button"><img src="assets\images\facebook-icon.png" alt="Facebook Icon">Facebook арқылы кіріңіз</button>
+            </div>
+            <div class="other-options">
+                <a routerLink="/sign-up">Тіркелу</a>
+                <a (click)="forgotPassword()">Парольді ұмыттыңыз ба ?</a>
+            </div>
+        </div>
+    </div>
+</div>

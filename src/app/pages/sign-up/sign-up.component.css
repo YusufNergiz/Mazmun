@@ -1,0 +1,68 @@
+.sign-up-container {
+    height: 80.3rem;
+    background: #FFFFFF;
+    box-shadow: 0rem 0.6rem 0.6rem 0.1rem rgba(0, 0, 0, 0.08);
+    border-radius: 1.5rem;
+}
+
+input {
+    width: 52.3rem;
+    height: 5rem;
+    border: 0.1rem solid #3F3F3F;
+    border-radius: 1rem;
+    text-indent: 1rem;
+}
+
+label {
+    text-align: left;
+    width: 52.3rem;
+    padding-bottom: 1rem;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #4F4F4F;
+}
+
+form > div {
+    margin-block: 2.4rem;
+}
+
+button {
+    background: #14BC1D;
+    border-radius: 1rem;
+    width: 52.3rem;
+    height: 5.5rem;
+    border: none;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1300px) {
+    .sign-up-container {
+        height: fit-content;
+    }
+
+    .sign-up-container > div > img {
+        width: 100%;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    label {
+        width: 70%;
+    }
+
+    button {
+        width: 70%;
+    }
+}

@@ -1,0 +1,167 @@
+.sign-in-container {
+    background: #FFFFFF;
+    box-shadow: 0rem 0.6rem 0.6rem 0.1rem rgba(0, 0, 0, 0.08);
+    border-radius: 1.5rem;
+    height: 61.2rem;
+}
+
+input {
+    width: 52.3rem;
+    height: 5rem;
+    border: 0.1rem solid #3F3F3F;
+    border-radius: 1rem;
+    text-indent: 1rem;
+}
+
+label {
+    text-align: left;
+    width: 52.3rem;
+    padding-bottom: 1rem;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #4F4F4F;
+}
+
+form > div {
+    margin-block: 2.4rem;
+}
+
+button {
+    background: #14BC1D;
+    border-radius: 1rem;
+    width: 52.3rem;
+    height: 5.5rem;
+    border: none;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #FFFFFF;
+}
+
+p {
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    text-align: center;
+    letter-spacing: -0.408px;
+    color: #4F4F4F;
+}
+
+.social-sign-in {
+    margin-top: 2rem;
+    width: 52.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.google-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
+    border: 0.1rem solid #3F3F3F;
+    border-radius: 1rem;
+    width: 24.1rem;
+    height: 3.7rem;
+    background: transparent;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #3F3F3F;
+}
+
+.google-button img, .facebook-button img {
+    padding-inline: 1rem;
+}
+
+.facebook-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
+    border: 0.1rem solid #3F3F3F;
+    border-radius: 1rem;
+    width: 24.1rem;
+    height: 3.7rem;
+    background: transparent;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #3F3F3F;
+}
+
+.other-options {
+    margin-block: 2rem;
+    width: 52.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.other-options > * {
+    text-decoration: none;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #14BC1D;
+}
+
+
+.line {
+    border: 1px solid #4F4F4F;
+    width: 14rem;
+    margin-inline: 2rem;
+}
+
+@media only screen and (max-width: 1300px) {
+    .sign-in-container {
+        height: fit-content;
+    }
+
+    .sign-in-container > div > img {
+        width: 100%;
+    }
+
+    .social-sign-in {
+        width: 100%;
+    }
+
+    .social-sign-in button {
+        width: 19rem;
+    }
+
+    .other-options {
+        width: 100%;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    label {
+        width: 70%;
+    }
+
+    button {
+        width: 70%;
+    }
+}

@@ -1,0 +1,24 @@
+<div class="container mt-5 mb-5">
+    <div class="sign-up-container row">
+        <div class="col-12 col-lg-6 center-items-inside">
+            <img src="assets\images\login-regster-image.png" alt="Login / Register Image">
+        </div>
+        <div class="col-12 col-lg-6 center-items-inside">
+            <form class="row" (ngSubmit)="registerUser()">
+                <div class="col-12 center-items-inside-column-wise">
+                    <label for="name">Аты-Жөні</label>
+                    <input type="text" name="name" id="name" [(ngModel)]="name">
+                </div>
+                <div class="col-12 center-items-inside-column-wise">
+                    <label for="email">Пошта</label>
+                    <input type="email" name="email" id="email" [(ngModel)]="email">
+                </div>
+                <div class="col-12 center-items-inside-column-wise">
+                    <label for="password">Пароль</label>
+                    <input type="password" name="password" id="password" [(ngModel)]="password">
+                </div>
+                <div class="col-12 center-items-inside-column-wise"><button type="submit">Тіркелу</button></div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "alemmedicus-70612": {
+      "hosting": {
+        "mazmun": [
+          "mazmun"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "alemmedicus-70612"
+  }
+}

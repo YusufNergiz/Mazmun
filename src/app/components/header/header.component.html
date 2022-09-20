@@ -1,0 +1,98 @@
+<div class="container mt-5 mb-5">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets\images\mazmunLogo.png" alt="Mazmun Logo" class="logo">
+          </a>
+          <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+           </button>
+          <div class="collapse navbar-collapse ms-lg-5" id="navbarSupportedContent" [ngbCollapse]="navbarCollapsed">
+            <ul class="me-auto mb-2 mb-lg-0 ms-5">
+                <form class="d-flex">
+                    <img src="assets\images\mangnifyingglass.png" alt="Search Icon" (click)="search()">
+                    <input class="form-control me-2 navbar-search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </ul>
+            <ul class="ms-auto row user-profile-container">
+                <div class="user-profile row col-6 col-lg-10 center-items-inside" *ngIf="!userLoggedIn">
+                    <a routerLink="/sign-in"><img src="assets\images\Vector.png" alt="User not Logged In Profile" style="width: 3.7rem; height: 3.7rem;">
+                    </a>
+                </div>
+                <div class="user-profile row col-6 col-lg-10" *ngIf="userLoggedIn">
+                    <div class="col-4 user-profile-picture" [ngStyle]="{'background-image': photoUrl ? 'url('+ photoUrl + ')' : 'url(' + profileImage + ')'}"></div>
+                    <div class="col-8 user-profile-info">
+                        <a href="#"><h3>{{displayName}}</h3></a>
+                        <a href="#"><p>{{email}}</p></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 center-items-inside">
+                    <a href="#"><img src="assets\images\store-solid 1.png" alt="Basket Image"></a>
+                </div>
+                <ul class="green-navbar-links">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Тұлға</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Құран және хадис</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Психология</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Ислами кітаптар</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Тұлғалық даму</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Жаңа кітаптар</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Классика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Отбасы және тәрбие</a>
+                    </li>
+                </ul>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg links-navbar">
+        <div class="container-fluid">
+              <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-lg-5" id="navbarSupportedContent" [ngbCollapse]="navbarCollapsed">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Тұлға</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Құран және хадис</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Психология</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Ислами кітаптар</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Тұлғалық даму</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Жаңа кітаптар</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Классика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Отбасы және тәрбие</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+</div>
