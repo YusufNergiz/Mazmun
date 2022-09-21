@@ -1,0 +1,200 @@
+.add-product-container{
+    background: #FFFFFF;
+    box-shadow: 0rem 0.6rem 0.6rem 0.1rem rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    height: 58.8rem;
+}
+
+form {
+    padding: 3rem;
+}
+
+/* Input Fields */
+
+input {
+    background: #FFFFFF;
+    border: 0.1rem solid #3F3F3F;
+    border-radius: 1rem;
+    width: 21.6rem;
+    height: 3.4rem;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #8B8B8B;
+    text-indent: 1rem;
+    margin-block: 1rem;
+}
+
+select {
+    background: #FFFFFF;
+    border: 0.1rem solid #3F3F3F;
+    border-radius: 1rem;
+    width: 21.6rem;
+    height: 3.4rem;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #8B8B8B;
+    text-indent: 1rem;
+    margin-block: 1rem;
+}
+
+.input-group {
+    background: #FFFFFF;
+    border-radius: 1rem;
+    width: 21.6rem;
+    height: 3.4rem;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #8B8B8B;
+    text-indent: 1rem;
+    margin-block: 1rem;
+}
+
+.coverImageInput {
+    background: #D9D9D9;
+    border-radius: 1rem;
+    width: 18.5rem;
+    height: 18rem;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.toggleDiscountButton {
+    background: #8B8B8B;
+    border: 0.1rem solid #3F3F3F;
+    border-radius: 1rem;
+    width: 21.6rem;
+    height: 3.4rem;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: white;
+    text-align: center;
+    margin-block: 1rem;
+}
+
+.discountedPriceEnabled {
+    background: #3F3F3F;
+}
+
+.dateInputContainer {
+    position: relative;
+    display: flex;
+}
+
+.calendarButton {
+    position: relative;
+    right: 3rem;
+    top: 1rem;
+    height: 3.4rem;
+    border: none;
+}
+
+.addBookButton {
+    background: #14BC1D;
+    border-radius: 1rem;
+    width: 21.6rem;
+    height: 3.4rem;
+    border: none;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #FFFFFF;
+}
+
+/*  */
+
+.displayBookInfo {
+    padding: 3rem;
+    width: 100%;
+}
+
+.displayBookInfo h5 {
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #3F3F3F;
+    margin-inline: 2rem;
+}
+
+.displayBookInfo h6 {
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #3F3F3F;
+    margin-inline: 2rem;
+    width: 8rem;
+    word-wrap: break-word;
+}
+
+.line {
+    border: 0.1rem solid #3F3F3F;
+    width: 58rem;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .add-product-container {
+        height: fit-content;
+    }
+
+    form {
+        padding: 0.5rem;
+    }
+
+    input {
+        width: 16rem;
+    }
+
+    select {
+        width: 16rem;
+    }
+
+    .addBookButton {
+        width: 16rem;
+    }
+
+    .toggleDiscountButton {
+        width: 16rem;
+    }
+
+    .displayBookInfo h5 {
+        margin-inline: 0.5rem;
+        font-size: 1.7rem;
+        padding: 1rem;
+    }   
+    
+    .line {
+        width: 100%;
+        margin: auto;
+    }
+
+    .displayBookInfo h6 {
+        font-size: 1.5rem;
+        margin-inline: 0;
+    }
+} 

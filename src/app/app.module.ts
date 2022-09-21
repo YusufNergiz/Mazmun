@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ToastService, AngularToastifyModule } from 'angular-toastify'; 
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -19,6 +19,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { MainComponent } from './pages/main/main.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
+import { AddProductComponent } from './pages/add-product/add-product.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
     FooterComponent,
     SignUpComponent,
     MainComponent,
-    SignInComponent
+    SignInComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    AngularToastifyModule
+    AngularToastifyModule,
+    ReactiveFormsModule
   ],
   providers: [UserServiceService, {provide: FIREBASE_OPTIONS, useValue: environment.firebase}, ToastService],
   bootstrap: [AppComponent]

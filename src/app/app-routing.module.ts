@@ -5,11 +5,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { MainComponent } from './pages/main/main.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
+import { AddProductComponent } from './pages/add-product/add-product.component';
 
 
 const routes: Routes = [
   {path: 'sign-up', component: SignUpComponent},
   {path: 'sign-in', component: SignInComponent},
+  {path: 'add-product', component: AddProductComponent},
   {path: '', component: MainComponent}
 ]
 

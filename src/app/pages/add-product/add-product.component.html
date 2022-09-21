@@ -1,0 +1,52 @@
+<div class="container mt-5 mb-5">
+    <div class="add-product-container row">
+        <div class="col-12 col-lg-6">
+            <form class="row center-items-inside" [formGroup]="bookForm">
+                <div class="col-6">
+                    <label for="bookCoverImage">
+                        <div class="coverImageInput" [ngStyle]="{'background-image' : url && 'url(' + url + ')'}">
+                        </div>
+                    </label>
+                    <input type="file" formControlName="coverImage" style="display: none;" id="bookCoverImage" (change)="getBookCoverImage($event); selectFile($event)">
+                    <input type="text" formControlName="bookName" placeholder="Кітап аты">
+                    <input type="text" formControlName="price" placeholder="Цена">
+                    <button (click)="toggleDiscount()" class="toggleDiscountButton">жеңілдік</button>
+                    <input type="text" formControlName="discountedPrice" placeholder="цена со скидкой" id="discountedPrice" class="discountedPriceEnabled">
+                    <input type="text" formControlName="yearOfIssue" placeholder="Год выпуска">
+                    <input type="text" formControlName="delivery" placeholder="Доставка">
+                </div>
+                <div class="col-6 ">
+                    <input type="text" formControlName="author" placeholder="Автор">
+                    <input type="text" formControlName="publisher" placeholder="Издатель">
+                    <input type="text" formControlName="series" placeholder="Серии">
+                    <input type="text" formControlName="pages" placeholder="Количество страниц">
+                    <input type="text" formControlName="isbn" placeholder="isbn">
+                    <select name="availability" id="availability" formControlName="availability">
+                        <option [ngValue]="true">доступный</option>
+                        <option [ngValue]="false">недоступен</option>
+                    </select>
+                    <input type="text" formControlName="cover" placeholder="Покрытие">
+                    <textarea cols="30" rows="5" placeholder="Аннотация" formControlName="description"></textarea>
+                    <button class="addBookButton mt-2" (click)="saveBookToFirestore()">сохранять</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="center-items-inside displayBookInfo">
+                <h5>Аты</h5>
+                <h5>Автор</h5>
+                <h5>Цена</h5>
+                <h5>Издатель</h5>
+                <h5>Год выпуска</h5>
+            </div>
+            <div class="line"></div>
+            <div class="center-items-inside displayBookInfo">
+                <h6>{{bookForm.value.bookName}}</h6>
+                <h6>{{bookForm.value.author}}</h6>
+                <h6>{{bookForm.value.price}}</h6>
+                <h6>{{bookForm.value.publisher}}</h6>
+                <h6>{{bookForm.value.yearOfIssue}}</h6>
+            </div>
+        </div>
+    </div>
+</div>
