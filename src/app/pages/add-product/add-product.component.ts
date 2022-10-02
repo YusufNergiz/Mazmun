@@ -4,7 +4,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { uuidv4 } from '@firebase/util';
 import { ToastService } from 'angular-toastify';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { serverTimestamp } from 'firebase/firestore';
 
 @Component({
   selector: 'app-add-product',
@@ -114,6 +115,7 @@ uploadTask.on('state_changed',
     // Upload completed successfully, now we can get the download URL
     getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
       this.afs.collection('books').doc(uuidv4()).set({
+        uploadDate: serverTimestamp(),
         bookName: this.bookForm.get("bookName")?.value,
         price: this.bookForm.get("price")?.value,
         discount: this.bookForm.get("discount")?.value,
@@ -128,6 +130,7 @@ uploadTask.on('state_changed',
         isbn: this.bookForm.get("isbn")?.value,
         availability: this.bookForm.get("availability")?.value,
         cover: this.bookForm.get("cover")?.value,
+        numberOfSales: 0,
         coverImage: downloadURL
       })
     });

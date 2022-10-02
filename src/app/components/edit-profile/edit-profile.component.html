@@ -1,0 +1,60 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#15a914" type = "fire" [fullScreen] = "true"></ngx-spinner>
+<div [formGroup]="profileForm">
+    <div class="row mt-5">
+        <div class="col-12 col-xl-4 profile-image-container">
+            <label for="profile-picture">
+                <div class="profile-picture" [ngStyle]="{'background-image' : newUserImage ? 'url(' + newUserImage + ')' : 'url(' + userImage + ')'}">
+                    <label for="profile-picture" style="cursor: pointer;"><div class="uploadImageButton"><fa-icon [icon]="faDownload" class="fa-xl"></fa-icon></div></label>
+                </div>
+            </label>
+            <input type="file" id="profile-picture" name="profile-picture" (change)="selectNewImage($event); chooseCurrentUserImage($event)">   
+        </div>
+        <div class="col-12 col-xl-8 profile-name-email">
+            <h2>Байланыс информациясы</h2>
+            <label for="email">Пошта</label>
+            <input type="email" id="email" name="email" value="{{userEmail}}" formControlName="userEmail">
+            <label for="name">Аты-Жөні</label>
+            <input type="text" id="name" name="name" value="{{userName}}" formControlName="userName">
+        </div>
+    </div>
+    
+    <div class="profile-info-container mt-3 mb-5">
+        <div class="row">
+            <div class="col-12 col-xl-6 profile-name-email">
+                <label for="phone">Телефон</label>
+                <input type="text" name="phone" id="phone" formControlName="userPhone">
+            </div>
+            <div class="col-12 col-xl-6 profile-name-email">
+                <label for="city">Қала</label>
+                <input type="text" name="city" id="city" formControlName="userCity">
+            </div>
+            <div class="col-12 col-xl-6 profile-name-email">
+                <label for="country">Елді мекен</label>
+                <input type="text" name="country" id="country" formControlName="userCountry">
+            </div>
+            <div class="col-12 col-xl-6 profile-name-email">
+                <label for="address">Көше атауы</label>
+                <input type="text" name="address" id="address" formControlName="userStreet">
+            </div>
+            <div class="col-12 col-xl-6 profile-name-email">
+                <label for="home">Үй</label>
+                <input type="text" name="home" id="home" formControlName="userHome">
+            </div>
+            <div class="col-12 col-xl-6 profile-name-email">
+                <label for="door">Кіреберіс</label>
+                <input type="text" name="door" id="door" formControlName="userEnterance">
+            </div>
+            <div class="col-12 col-xl-6 profile-name-email">
+                <label for="apartment">Пәтер / Кеңсе</label>
+                <input type="text" name="apartment" id="apartment" formControlName="userApartment">
+            </div>
+            <div class="col-12 col-xl-6 profile-name-email">
+                <label for="email-index">Пошта индексі</label>
+                <input type="text" name="email-index" id="email-index" formControlName="userPostalCode">
+            </div>
+            <div class="save-button-container mt-5">
+                <button (click)="updateUserData()" [disabled]="profileForm.invalid" [ngClass]="{'disabledButton' : profileForm.invalid, 'saveButton' : profileForm.valid}">Сақтау</button>
+            </div>
+        </div>
+    </div>
+</div>

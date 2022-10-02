@@ -1,1 +1,47 @@
-<h1>Main Page</h1>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#15a914" type = "fire" [fullScreen] = "true"></ngx-spinner>
+<div class="container mt-5 mb-5">
+  <div class="mainCarouselContainer">
+    <!-- Main Wide Carousel -->
+    <div>
+      <ngb-carousel *ngIf="slides" class="mainAdCarousel">
+        <ng-template ngbSlide *ngFor="let slide of slides">
+          <div class="adContainer" [ngStyle]="{'background-image' : 'url(' + slide.src + ')'}">
+            <div class="carousel-caption mainAdCarouselText">
+              <h3>{{slide.title}}</h3>
+              <button>Сатып алу<fa-icon [icon]="faArrowRight"></fa-icon></button>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <!-- -------------- -->
+
+    <!-- Book Display Carousel -->
+    <div class="margin-in-mobile">
+      <ngb-carousel *ngIf="bookSlides" class="mainBookDisplayCarousel">
+        <ng-template ngbSlide *ngFor="let book of latestBooks | async">
+          <div class="bookContainer" [ngStyle]="{'background-image' : 'url(' + book.coverImage + ')'}">
+          </div>
+          <div>
+            <h3 class="bookTitle">{{book.bookName}}</h3>
+            <img [src]="book.coverImage" alt="book.bookName" class="bookCover">
+          </div>  
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <!-- ------------------ -->
+  </div>
+
+  <div class="mt-5 mb-5">
+    <app-books-carousel></app-books-carousel>
+  </div>
+
+  <div class="mt-5 mb-5">
+    <app-special-offer></app-special-offer>
+  </div>
+
+  <div class="mt-5 mb-5">
+    <app-most-sold-books-carousel></app-most-sold-books-carousel>
+  </div>
+
+</div>

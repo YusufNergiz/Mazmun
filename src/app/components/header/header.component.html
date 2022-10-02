@@ -1,3 +1,4 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#15a914" type = "fire" [fullScreen] = "true"></ngx-spinner>
 <div class="container mt-5 mb-5">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -19,11 +20,11 @@
                     <a routerLink="/sign-in"><img src="assets\images\Vector.png" alt="User not Logged In Profile" style="width: 3.7rem; height: 3.7rem;">
                     </a>
                 </div>
-                <div class="user-profile row col-6 col-lg-10" *ngIf="userLoggedIn">
-                    <div class="col-4 user-profile-picture" [ngStyle]="{'background-image': photoUrl ? 'url('+ photoUrl + ')' : 'url(' + profileImage + ')'}"></div>
+                <div class="user-profile row col-6 col-lg-10" *ngIf="userLoggedIn" routerLink="/profile">
+                    <div class="col-4 user-profile-picture" [ngStyle]="{'background-image': userProfileImage ? 'url(' + userProfileImage + ')' : photoUrl ? 'url('+ photoUrl + ')' : 'url(' + profileImage + ')'}"></div>
                     <div class="col-8 user-profile-info">
-                        <a href="#"><h3>{{displayName}}</h3></a>
-                        <a href="#"><p>{{email}}</p></a>
+                        <a routerLink="/profile"><h3>{{displayName}}</h3></a>
+                        <a routerLink="/profile"><p>{{email}}</p></a>
                     </div>
                 </div>
                 <div class="col-6 col-lg-2 center-items-inside">

@@ -1,0 +1,19 @@
+<div class="mt-5">
+  <h1>Оқырмандар таңдауы</h1>
+  <swiper
+    [config]="swiperConfig"
+    class="mySwiper mt-5"
+  >
+    <ng-template swiperSlide *ngFor="let book of allBooks | async">
+      <div class="bookCard">
+        <div class="bookCover" [ngStyle]="{'background-image' : 'url(' + book.coverImage + ')'}"></div>
+        <div class="bookNameAndPrice">
+          <p class="bookName">{{book.bookName}}</p>          
+          <p class="bookPrice">{{book.discount ? book.discountedPrice : book.price}} тг</p>
+        </div>
+        <p class="bookAuthor">{{book.author}}</p>
+        <p class="bookDate">{{book.yearOfIssue}}</p>
+      </div>  
+    </ng-template>
+  </swiper>
+</div>

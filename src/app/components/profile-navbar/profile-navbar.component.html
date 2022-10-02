@@ -1,0 +1,9 @@
+<div class="profile-navbar-container">
+    <button (click)="changeTabIndex(0)"><fa-icon [icon]="faUser" class="fa-xl" [ngClass]="tabIndex === 0 ? 'activeButton' : 'inActiveButton'"></fa-icon> Жалпы</button>
+    <button (click)="changeTabIndex(1)"><fa-icon [icon]="faBook" class="fa-xl" [ngClass]="tabIndex === 1 ? 'activeButton' : 'inActiveButton'" ></fa-icon> Менің кітаптарым</button>
+    <button (click)="changeTabIndex(2)"><fa-icon [icon]="faBookmar" class="fa-xl" [ngClass]="tabIndex === 2 ? 'activeButton' : 'inActiveButton'"></fa-icon> Таңдаулылар</button>
+    <button (click)="changeTabIndex(3)"><fa-icon [icon]="faCartShopping" class="fa-xl" [ngClass]="tabIndex === 3 ? 'activeButton' : 'inActiveButton'"></fa-icon> Себет</button>
+    <button (click)="changeTabIndex(4)"><fa-icon [icon]="faReceipt" class="fa-xl" [ngClass]="tabIndex === 4 ? 'activeButton' : 'inActiveButton'"></fa-icon> Төлем тарихы</button>
+    <button (click)="changeTabIndex(5)"><fa-icon [icon]="faLockOpen" class="fa-xl" [ngClass]="tabIndex === 5 ? 'activeButton' : 'inActiveButton'"></fa-icon> Құпия сөз өзгерту</button>
+    <button (click)="changeTabIndex(6)"><fa-icon [icon]="faExit" class="fa-xl" [ngClass]="tabIndex === 6 ? 'activeButton' : 'inActiveButton'"></fa-icon> Шығу</button>
+</div>

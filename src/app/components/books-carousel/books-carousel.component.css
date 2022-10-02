@@ -1,0 +1,93 @@
+@import 'swiper/swiper.min.css';
+@import 'swiper/modules/pagination/pagination.min.css';
+
+.swiper {
+    width: 100%;
+    height: 55.1rem;
+  }
+
+h1 {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 3rem;
+  letter-spacing: -0.408px;
+  color: #000000;
+}
+
+.bookCard {
+  width: 29.6rem;
+  height: 51.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.bookCover {
+  background-position: center;
+  background-size: cover;
+  height: 42.9rem;
+  width: 100%;
+}
+
+.bookNameAndPrice {
+  display: flex;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.bookName {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16.6rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.408px;
+  color: #363636;
+}
+
+.bookPrice {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.408px;
+  color: #14BC1D;
+}
+
+.bookAuthor {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 0;
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.408px;
+  color: #4F4F4F;
+}
+
+.bookDate {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.408px;
+  color: #4F4F4F;
+}

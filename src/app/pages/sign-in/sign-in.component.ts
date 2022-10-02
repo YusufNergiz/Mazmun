@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { ToastService } from 'angular-toastify';
 import { getAuth, signInWithEmailAndPassword, signInWithPopup, sendPasswordResetEmail } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -20,7 +22,7 @@ export class SignInComponent implements OnInit {
   auth = getAuth()
   // 
 
-  constructor(private router: Router, private toast: ToastService) { }
+  constructor(private router: Router, private toast: ToastService, private authService: AuthService, private afs: AngularFirestore) { }
 
   ngOnInit(): void {
   }
@@ -47,6 +49,7 @@ export class SignInComponent implements OnInit {
 
     signInWithPopup(this.auth, provider)
       .then((result) => {
+        this.afs.collection('users').doc(result.user.uid).set({name: result.user.displayName, email: result.user.email, uid: result.user.uid}, {merge: true})
         this.router.navigate(['/'])
         this.toast.success(`Signed In as ${result.user.displayName}`)
       })

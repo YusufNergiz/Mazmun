@@ -1,0 +1,128 @@
+.profile-picture {
+    position: relative;
+    width: 21.8rem;
+    height: 23.8rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-size: cover;
+    background-image: url("src\assets\images\Bitmap (1).png");
+    background-position: center;
+}
+
+#profile-picture {
+    display: none;
+}
+
+.profile-name-email {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name-email > * {
+    padding-block: 1rem;
+}
+
+.profile-name-email label {
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #3F3F3F;
+}
+
+input {
+    border: 0.1rem solid #3F3F3F;
+    border-radius: 1rem;
+    width: 35.6rem;
+    height: 4.1rem;
+    text-indent: 1rem;
+}
+
+.profile-name-email h2 {
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #3F3F3F;
+}
+
+.save-button-container {
+    float: right;
+    text-align: right;
+    width: 92%;
+}
+
+.saveButton {
+    background: #14BC1D;
+    border-radius: 1rem;
+    width: 16.1rem;
+    height: 4.5rem;
+    color: white;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.disabledButton {
+    background: darkgray;
+    border-radius: 1rem;
+    width: 16.1rem;
+    height: 4.5rem;
+    color: white;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.uploadImageButton {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: #1D85FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -2rem;
+    right: -2rem;
+    z-index: 5;
+}
+
+.uploadImageButton > * {
+    color: white;
+}
+
+@media only screen and (max-width: 1300px) {
+    .profile-name-email {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .profile-info-container {
+        height: fit-content;
+    }
+}

@@ -1,0 +1,14 @@
+button {
+    background: #14BC1D;
+    border-radius: 1rem;
+    width: 20rem;
+    height: 4.5rem;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.408px;
+    color: #FFFFFF;
+    border: none;
+}

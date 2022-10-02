@@ -1,0 +1,16 @@
+<div class="container mt-5 mb-5">
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>Жеке кабинет</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-4 center-items-inside">
+                <app-profile-navbar (tabIndexEvent)="changeTabIndex($event)"></app-profile-navbar>
+            </div>
+            <div class="col-12 col-lg-8">
+                <app-edit-profile *ngIf="tabIndex === 0"></app-edit-profile>
+                <app-sign-out *ngIf="tabIndex === 6"></app-sign-out>
+            </div>
+        </div>
+    </div>
+</div>

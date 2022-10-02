@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { UserServiceService } from 'src/app/services/user-service.service';
 import { getAuth } from "firebase/auth";
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 @Component({
@@ -20,15 +21,21 @@ export class HeaderComponent implements OnInit {
   mobile: boolean = false;
   
 
-  // User Data
+  // User Data from their Google Accounts
   userLoggedIn: boolean = false;
   displayName!: any; 
   email!: any;
   photoUrl!: any;
   // 
 
+  // User Data from their Firestore Documents
+  userName!: string;
+  userProfileImage!: string;
+  // 
 
-  constructor(private userService: UserServiceService, private afa: AngularFireAuth) { }
+  constructor(private userService: UserServiceService, private afa: AngularFireAuth, private spinner: NgxSpinnerService) {
+    spinner.show()
+   }
 
   ngOnInit(): void {
     this.checkIfUserSignedIn()
@@ -41,10 +48,20 @@ export class HeaderComponent implements OnInit {
         this.displayName = user.displayName;
         this.email = user.email;
         this.photoUrl = user.photoURL;
+        this.fetchUserData()
       }
       else {
         this.userLoggedIn = false;
+        this.spinner.hide()
       }
+    })
+  }
+
+  async fetchUserData() {
+    this.userService.fetchUserData().then((data: any) => {
+      this.userName = data.name,
+      this.userProfileImage = data.profileImage
+      this.spinner.hide()
     })
   }
 

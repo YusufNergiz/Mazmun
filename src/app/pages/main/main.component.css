@@ -1,0 +1,138 @@
+.mainCarouselContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mainAdCarousel {
+    width: 97.2rem;
+    height: 47.5rem;
+}
+
+.mainAdCarouselText {
+    top: 11.2rem;
+    left: 10.8rem;
+    width: 59rem;
+    text-align: left;
+}
+
+.mainAdCarouselText h3 {
+    text-align: left;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.8rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.408px;
+    color: #362A2A;
+}
+
+.mainAdCarouselText button {
+    margin-top: 2rem;
+    width: 18.2rem;
+    height: 4.6rem;
+    border: none;
+    background: #14BC1D;
+    box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.408px;
+    color: #FFFFFF;
+}
+
+.mainAdCarouselText button > * {
+    padding-inline: 0.5rem;
+}
+
+/* Second Book Carousel */
+
+.mainBookDisplayCarousel {
+    width: 33.2rem;
+    height: 47.5rem;
+}
+
+.bookContainer {
+    background-size: cover;
+    width: 33.2rem;
+    height: 47.5rem;
+    background-position: top;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+}
+
+.adContainer {
+    background-size: cover;
+    width: 97.2rem;
+    height: 47.5rem;
+    background-position: center;
+}
+
+.bookTitle {
+    position: absolute;
+    top: 20%;
+    width: 20.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.3rem;
+    line-height: 2.4rem;
+    text-align: center;
+    letter-spacing: -0.408px;
+    color: #FFFFFF;
+}
+
+.bookCover {
+    cursor: pointer;
+    position: absolute;
+    width: 16.8rem;
+    height: 26.3rem;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*  */
+@media only screen and (max-width: 1300px) {
+
+    .mainCarouselContainer {
+        flex-direction: column;
+    }
+
+    .mainAdCarousel {
+        width: 100vw;
+    }
+
+    .adContainer {
+        width: 100%;
+    }
+
+    .mainAdCarouselText {
+        top: 50%;
+        left: 10rem;
+        width: 60%;
+    }
+
+    .mainAdCarouselText h3 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .mainAdCarouselText button {
+        width: 10rem;
+        height: 3rem;
+        font-size: 1rem;
+        line-height: 3rem;
+    }
+
+    .mainBookDisplayCarousel {
+        margin: auto;
+    }
+}
