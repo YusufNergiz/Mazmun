@@ -8,4 +8,4 @@
 
 ![](Images/mazmun-Login.PNG)
 
-![](Images/mazmun-profilePage.PNG)
+![](Images/mazmun-ProfilePage.PNG)
